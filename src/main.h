@@ -1,7 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2011-2013 PPCoin developers
-// Copyright (c) 2013 Primecoin developers
+// Copyright (c) 2013 Advertisingcoin developers
 // Distributed under conditional MIT/X11 software license,
 // see the accompanying file COPYING
 #ifndef BITCOIN_MAIN_H
@@ -67,7 +67,7 @@ static const int fHaveUPnP = false;
 #endif
 
 static const uint256 hashGenesisBlockOfficial("0x1d724e874ee9ea571563239bde095911f128db47c7612fb1968c08c9f95cabe8");
-static const uint256 hashGenesisBlockTestNet("0x221156cf301bc3585e72de34fe1efdb6fbd703bc27cfc468faa1cdd889d0efa0");
+static const uint256 hashGenesisBlockTestNet("0x26ee5563233ed8cbdd8af5f16bc55b73d9d8cc727392d507292ca959fd08c03f");
 
 extern CScript COINBASE_FLAGS;
 
@@ -1283,10 +1283,10 @@ public:
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;
     unsigned int nTime;
-    unsigned int nBits;  // Primecoin: prime chain target, see prime.cpp
+    unsigned int nBits;  // Advertisingcoin: prime chain target, see prime.cpp
     unsigned int nNonce;
 
-    // Primecoin: proof-of-work certificate
+    // Advertisingcoin: proof-of-work certificate
     // Multiplier to block hash to derive the probable prime chain (k=0, 1, ...)
     // Cunningham Chain of first kind:  hash * multiplier * 2**k - 1
     // Cunningham Chain of second kind: hash * multiplier * 2**k + 1
@@ -1326,13 +1326,13 @@ public:
         return (nBits == 0);
     }
 
-    // Primecoin: header hash does not include prime certificate
+    // Advertisingcoin: header hash does not include prime certificate
     uint256 GetHeaderHash() const
     {
         return Hash(BEGIN(nVersion), END(nNonce));
     }
 
-    // Primecoin: block hash includes prime certificate
+    // Advertisingcoin: block hash includes prime certificate
     uint256 GetHash() const
     {
         CDataStream ss(SER_GETHASH, 0);
@@ -1356,8 +1356,8 @@ public:
 
     // memory only
     mutable std::vector<uint256> vMerkleTree;
-    unsigned int nPrimeChainType;   // primecoin: chain type (memory-only)
-    unsigned int nPrimeChainLength; // primecoin: chain length (memory-only)
+    unsigned int nPrimeChainType;   // advertisingcoin: chain type (memory-only)
+    unsigned int nPrimeChainLength; // advertisingcoin: chain length (memory-only)
 
     CBlock()
     {
@@ -1496,7 +1496,7 @@ public:
             return error("%s() : deserialize or I/O error", __PRETTY_FUNCTION__);
         }
 
-        // Primecoin: no proof-of-work check here unlike bitcoin
+        // Advertisingcoin: no proof-of-work check here unlike bitcoin
         // Check the header
         return true;
     }
@@ -1660,11 +1660,11 @@ public:
 
     // (memory only) Total amount of work (expected number of hashes) in the chain up to and including this block
     uint256 nChainWork;
-    unsigned int nWorkTransition; // primecoin: work transition ratio (memory-only)
+    unsigned int nWorkTransition; // advertisingcoin: work transition ratio (memory-only)
 
-    unsigned int nPrimeChainType;   // primecoin: chain type
-    unsigned int nPrimeChainLength; // primecoin: chain length
-    int64 nMoneySupply;             // primecoin: money supply
+    unsigned int nPrimeChainType;   // advertisingcoin: chain type
+    unsigned int nPrimeChainLength; // advertisingcoin: chain length
+    int64 nMoneySupply;             // advertisingcoin: money supply
 
     // Number of transactions in this block.
     // Note: in a potential headers-first mode, this number cannot be relied upon
@@ -1784,7 +1784,7 @@ public:
 
     bool CheckIndex() const
     {
-        // Primecoin: disabled proof-of-work check for loading block index
+        // Advertisingcoin: disabled proof-of-work check for loading block index
         // return CheckProofOfWork(GetBlockHash(), nBits);
         return true;
     }
@@ -1858,7 +1858,7 @@ class CDiskBlockIndex : public CBlockIndex
 {
 public:
     uint256 hashPrev;
-    uint256 hashBlock; // primecoin: persist block hash as well
+    uint256 hashBlock; // advertisingcoin: persist block hash as well
 
     CDiskBlockIndex() {
         hashPrev = 0;

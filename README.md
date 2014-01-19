@@ -1,34 +1,34 @@
-advertisingcoin integration/staging tree
+Advertisingcoin integration/staging tree
 ==================================
 
 http://advertisingcoin.org
 
-Copyright (c) 2013 advertisingcoin Developers
+Copyright (c) 2013 Advertisingcoin Developers
 
 Copyright (c) 2009-2013 Bitcoin Developers
 
 Copyright (c) 2011-2013 PPCoin Developers
 
-What is advertisingcoin?
+What is Advertisingcoin?
 ------------------
 
-advertisingcoin is an experimental cryptocurrency that introduces the first
-scientific computing proof-of-work to cryptocurrency technology. advertisingcoin's
+Advertisingcoin is an experimental cryptocurrency that introduces the first
+scientific computing proof-of-work to cryptocurrency technology. Advertisingcoin's
 proof-of-work is an innovative design based on searching for prime number
 chains, providing potential scientific value in addition to minting and
-security for the network. Similar to Bitcoin, advertisingcoin enables instant payments
+security for the network. Similar to Bitcoin, Advertisingcoin enables instant payments
 to anyone, anywhere in the world. It also uses peer-to-peer technology to 
 operate with no central authority: managing transactions and issuing money are 
-carried out collectively by the network. advertisingcoin is also the name of the open
+carried out collectively by the network. Advertisingcoin is also the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the advertisingcoin client sofware, see http://advertisingcoin.org.
+the Advertisingcoin client sofware, see http://advertisingcoin.org.
 
 License
 -------
 
-advertisingcoin is released under conditional MIT license. See  COPYING` for more
+Advertisingcoin is released under conditional MIT license. See  COPYING` for more
 information.
 
 Development process
@@ -52,7 +52,7 @@ controversial.
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/advertisingcoin/advertisingcoin/tags) are
 created regularly to indicate new official, stable release versions of
-advertisingcoin.
+Advertisingcoin.
 
 Testing
 -------

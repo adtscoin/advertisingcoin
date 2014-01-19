@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2013 Primecoin developers
+// Copyright (c) 2013 Advertisingcoin developers
 // Distributed under conditional MIT/X11 software license,
 // see the accompanying file COPYING
 
@@ -37,6 +37,7 @@ namespace Checkpoints
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
         ( 0, hashGenesisBlockOfficial )
+      //  ( 72200, uint256("0x63160677a0dce11897607d62fd6eb3f35c3c42759322c477027c2f2a439df0bc") )
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,

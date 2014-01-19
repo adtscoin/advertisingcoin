@@ -1,4 +1,4 @@
-// Copyright (c) 2013 Primecoin developers
+// Copyright (c) 2013 Advertisingcoin developers
 // Distributed under conditional MIT/X11 software license,
 // see the accompanying file COPYING
 
@@ -218,7 +218,7 @@ unsigned int TargetFromInt(unsigned int nLength)
 }
 
 // Get mint value from target
-// Primecoin mint rate is determined by target
+// Advertisingcoin mint rate is determined by target
 //   mint = 999 / (target length ** 2)
 // Inflation is controlled via Moore's Law
 bool TargetGetMint(unsigned int nBits, uint64& nMint)
@@ -341,9 +341,9 @@ bool ProbablePrimeChainTest(const CBigNum& bnPrimeChainOrigin, unsigned int nBit
     nChainLengthBiTwin = 0;
 
     // Test for Cunningham Chain of first kind
-    ProbableCunninghamChainTest(bnPrimeChainOrigin-1, true, fFermatTest, nChainLengthCunningham1);
+    bool b1= ProbableCunninghamChainTest(bnPrimeChainOrigin-1, true, fFermatTest, nChainLengthCunningham1);
     // Test for Cunningham Chain of second kind
-    ProbableCunninghamChainTest(bnPrimeChainOrigin+1, false, fFermatTest, nChainLengthCunningham2);
+    bool b2=ProbableCunninghamChainTest(bnPrimeChainOrigin+1, false, fFermatTest, nChainLengthCunningham2);
     // Figure out BiTwin Chain length
     // BiTwin Chain allows a single prime at the end for odd length chain
     nChainLengthBiTwin =

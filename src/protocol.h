@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2013 Primecoin developers
+// Copyright (c) 2013 Advertisingcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,10 +16,10 @@
 #include <string>
 #include "uint256.h"
 
-#define PRIMECOIN_PORT   4777
-#define RPC_PORT         11777 
-#define TESTNET_PORT     4776
-#define TESTNET_RPC_PORT 11776
+#define PRIMECOIN_PORT   47377
+#define RPC_PORT         113777
+#define TESTNET_PORT     47376
+#define TESTNET_RPC_PORT 113776
 
 extern bool fTestNet;
 

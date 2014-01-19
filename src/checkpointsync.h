@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2013 PPCoin developers
-// Copyright (c) 2013 Primecoin developers
+// Copyright (c) 2013 Advertisingcoin developers
 // Distributed under conditional MIT/X11 open source software license
 // see the accompanying file COPYING
 #ifndef PRIMECOIN_CHECKPOINTSYNC_H

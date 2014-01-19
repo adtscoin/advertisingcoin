@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = primecoin-qt
-macx:TARGET = "Primecoin-Qt"
+TARGET = advertisingcoin-qt
+macx:TARGET = "Advertisingcoin-Qt"
 VERSION = 0.1.2
 INCLUDEPATH += src src/json src/qt
 QT += network
@@ -400,7 +400,7 @@ macx:HEADERS += src/qt/macdockiconhandler.h
 macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/primecoin.icns
+macx:ICON = src/qt/res/icons/advertisingcoin.icns
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
@@ -424,3 +424,4 @@ contains(RELEASE, 1) {
 }
 
 system($$QMAKE_LRELEASE -silent $$TRANSLATIONS)
+#win32:CONFIG += console
